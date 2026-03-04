@@ -69,7 +69,7 @@ const LinkPage = () => {
   // Always show the branded domain for links, not localhost.
   // You can override this via VITE_APP_DOMAIN in .env if needed.
   const appOrigin =
-    import.meta.env.VITE_APP_DOMAIN || "https://trimmer";
+    import.meta.env.VITE_APP_DOMAIN || "https://trimrrapp.vercel.app";
 
   return (
     <>
