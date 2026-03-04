@@ -84,17 +84,17 @@ const LinkPage = () => {
           <a
             href={`${appOrigin}/${link}`}
             target="_blank"
-            className="text-3xl sm:text-4xl text-blue-400 font-bold hover:underline cursor-pointer"
+            className="max-w-full break-all text-2xl sm:text-3xl text-blue-400 font-bold hover:underline cursor-pointer"
           >
             {appOrigin}/{link}
           </a>
           <a
             href={url?.original_url}
             target="_blank"
-            className="flex items-center gap-1 hover:underline cursor-pointer"
+            className="flex items-center gap-1 max-w-full break-all hover:underline cursor-pointer"
           >
-            <LinkIcon className="p-1" />
-            {url?.original_url}
+            <LinkIcon className="p-1 shrink-0" />
+            <span className="break-all">{url?.original_url}</span>
           </a>
           <span className="flex items-end font-extralight text-sm">
             {new Date(url?.created_at).toLocaleString()}
