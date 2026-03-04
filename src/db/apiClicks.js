@@ -85,7 +85,8 @@ async function resolveLocationFromIp() {
 export const storeClicks = async ({id}) => {
   try {
     const res = parser.getResult();
-    const device = res.type || "desktop"; // Default to desktop if type is not detected
+    // UAParser exposes device info under res.device.type (e.g. "mobile", "tablet", "desktop")
+    const device = res.device?.type || "desktop";
 
     const {city, country} = await resolveLocationFromIp();
 
