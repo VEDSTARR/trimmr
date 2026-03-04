@@ -35,17 +35,17 @@ const LinkCard = ({url = [], fetchUrls}) => {
         className="h-32 object-contain ring ring-blue-500 self-start"
         alt="qr code"
       />
-      <Link to={`/link/${url?.id}`} className="flex flex-col flex-1">
-        <span className="text-3xl font-extrabold hover:underline cursor-pointer">
+      <Link to={`/link/${url?.id}`} className="flex flex-col flex-1 min-w-0">
+        <span className="text-2xl sm:text-3xl font-extrabold hover:underline cursor-pointer break-words">
           {url?.title}
         </span>
-        <span className="text-2xl text-blue-400 font-bold hover:underline cursor-pointer">
+        <span className="mt-1 text-lg sm:text-2xl text-blue-400 font-bold hover:underline cursor-pointer max-w-full break-all">
           https://trimrrapp.vercel.app/
           {url?.custom_url ? url?.custom_url : url.short_url}
         </span>
-        <span className="flex items-center gap-1 hover:underline cursor-pointer">
-          <LinkIcon className="p-1" />
-          {url?.original_url}
+        <span className="flex items-center gap-1 hover:underline cursor-pointer max-w-full break-all">
+          <LinkIcon className="p-1 shrink-0" />
+          <span className="break-all">{url?.original_url}</span>
         </span>
         <span className="flex items-end font-extralight text-sm flex-1">
           {new Date(url?.created_at).toLocaleString()}
