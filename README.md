@@ -26,7 +26,7 @@ A full-stack URL shortening web app built with **React.js, Supabase, and Tailwin
 
 ```bash
 # Clone the repository
-git clone https://github.com/VEDSTARR/trimmr.git
+git clone https://github.com/kunal-lagad/trimmr.git
 
 # Navigate to project
 cd trimmr
